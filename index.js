@@ -7,10 +7,14 @@ const app = express();
 //Init Middleware
 //app.use(logger);
 //Handlebars Middleware
-
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 //Body Parser Middleware
 app.use(express.json());
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: false }));
+app.get("/", (req, res) => {
+  res.render("index");
+});
 
 //Set Static Folder
 app.use(express.static(path.join(__dirname, "public")));
