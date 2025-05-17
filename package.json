@@ -4,7 +4,8 @@
   "description": "Building a server side functionality using express JS with basic CRUDE operations",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "keywords": [],
   "author": "",
